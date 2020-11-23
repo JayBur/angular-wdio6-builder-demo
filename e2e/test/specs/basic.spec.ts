@@ -1,8 +1,12 @@
+import {Util} from '../util/util.spec';
+
+const util = new Util();
+
 describe('webdriver.io page', () => {
   it('should have the right title', () => {
     browser.url('');
     const title = browser.getTitle();
-    expect(title).toEqual('AngularWdio6BuilderDemo');
+    expect(title).toEqual(util.browserTitle);
   });
 
   it('should say app is running', () => {
